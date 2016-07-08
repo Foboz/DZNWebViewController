@@ -44,6 +44,9 @@ typedef NS_OPTIONS(NSUInteger, DZNsupportedWebActions) {
  */
 @interface DZNWebViewController : UIViewController <DZNNavigationDelegate, WKUIDelegate, UITableViewDataSource, UITableViewDelegate>
 
+@property (nonatomic, strong) UIBarButtonItem *backwardBarItem;
+@property (nonatomic, strong) UIBarButtonItem *forwardBarItem;
+
 /** The web view that the controller manages. */
 @property (nonatomic, strong) DZNWebView *webView;
 /** The URL identifying the location of the content to load. */
