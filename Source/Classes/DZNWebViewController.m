@@ -123,10 +123,10 @@ static char DZNWebViewControllerKVOContext = 0;
 {
     [super viewDidAppear:animated];
     
-    static dispatch_once_t didAppearConfig;
-    dispatch_once(&didAppearConfig, ^{
-        [self configureBarItemsGestures];
-    });
+//    static dispatch_once_t didAppearConfig;
+//    dispatch_once(&didAppearConfig, ^{
+//        [self configureBarItemsGestures];
+//    });
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -464,7 +464,7 @@ static char DZNWebViewControllerKVOContext = 0;
         [self.presentedViewController dismissViewControllerAnimated:YES completion:^{
             
             // The bar button item's gestures are invalidated after using them, so we must re-assign them.
-            [self configureBarItemsGestures];
+//            [self configureBarItemsGestures];
         }];
     }
 }

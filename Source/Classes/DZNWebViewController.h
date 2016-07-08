@@ -46,6 +46,8 @@ typedef NS_OPTIONS(NSUInteger, DZNsupportedWebActions) {
 
 @property (nonatomic, strong) UIBarButtonItem *backwardBarItem;
 @property (nonatomic, strong) UIBarButtonItem *forwardBarItem;
+- (void)goBackward:(id)sender;
+- (void)goForward:(id)sender;
 
 /** The web view that the controller manages. */
 @property (nonatomic, strong) DZNWebView *webView;
