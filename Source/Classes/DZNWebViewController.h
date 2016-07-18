@@ -105,6 +105,8 @@ typedef NS_OPTIONS(NSUInteger, DZNsupportedWebActions) {
 /// @name Appearance customisation
 ///------------------------------------------------
 
++ (WKWebViewConfiguration *) webViewConfiguration;
+
 // The back button displayed on the tool bar (requieres DZNWebNavigationToolBackward)
 @property (nonatomic, strong) UIImage *backwardButtonImage;
 // The forward button displayed on the tool bar (requieres DZNWebNavigationToolForward)

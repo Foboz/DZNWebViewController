@@ -75,7 +75,7 @@ static char DZNWebViewControllerKVOContext = 0;
     self.allowHistory = YES;
     self.showPageTitleAndURL = YES;
     
-    self.webView = [[DZNWebView alloc] initWithFrame:self.view.bounds configuration:[WKWebViewConfiguration new]];
+    self.webView = [[DZNWebView alloc] initWithFrame:self.view.bounds configuration:[[self class] webViewConfiguration]];
     self.webView.backgroundColor = [UIColor whiteColor];
     self.webView.allowsBackForwardNavigationGestures = YES;
     self.webView.UIDelegate = self;
@@ -145,6 +145,11 @@ static char DZNWebViewControllerKVOContext = 0;
 
 
 #pragma mark - Getter methods
+
++ (WKWebViewConfiguration *) webViewConfiguration
+{
+  return [WKWebViewConfiguration new];
+}
 
 - (UIProgressView *)progressView
 {
