@@ -54,10 +54,13 @@ typedef NS_OPTIONS(NSUInteger, DZNWebNavigationPrompt) {
  */
 @interface DZNWebViewController : UIViewController <DZNNavigationDelegate, WKUIDelegate, UITableViewDataSource, UITableViewDelegate>
 
-@property (nonatomic, strong) UIBarButtonItem *backwardBarItem;
-@property (nonatomic, strong) UIBarButtonItem *forwardBarItem;
+@property (nonatomic, strong, readonly) UIBarButtonItem *backwardBarItem;
+@property (nonatomic, strong, readonly) UIBarButtonItem *forwardBarItem;
+@property (nonatomic, strong, readonly) UIBarButtonItem *stateBarItem;
+@property (nonatomic, strong, readonly) UIBarButtonItem *actionBarItem;
 - (void)goBackward:(id)sender;
 - (void)goForward:(id)sender;
+- (NSArray *)navigationToolItems; //Override only
 
 /** The web view that the controller manages. */
 @property (nonatomic, strong) DZNWebView *webView;
