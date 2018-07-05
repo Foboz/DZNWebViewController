@@ -110,9 +110,9 @@ static char DZNWebViewControllerKVOContext = 0;
     
     if (!self.completedInitialLoad) {
         
-//        [UIView performWithoutAnimation:^{
-//            [self configureToolBars];
-//        }];
+        [UIView performWithoutAnimation:^{
+            [self configureToolBars];
+        }];
         self.completedInitialLoad = YES;
     }
     
